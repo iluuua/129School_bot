@@ -1,0 +1,17 @@
+   body {
+       font-family: Arial, sans-serif;
+       text-align: center;
+   }
+   #game-area {
+       margin: 20px;
+       border: 2px solid #666;
+       padding: 20px;
+       border-radius: 10px;
+   }
+   .hamster {
+       background-color: #f0e68c;
+       border: 1px solid #ddd;
+       margin-bottom: 10px;
+       padding: 10px;
+       border-radius: 5px;
+   }
