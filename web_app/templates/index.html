@@ -1,13 +1,28 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div class="Main">
-        hi
-    </div>
-</body>
-</html>
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+       <title>Idle Tap Game</title>
+   </head>
+   <body>
+       <h1>Idle Tap Game</h1>
+       <div id="game-area">
+           <div id="hamster1" class="hamster">
+               <h2>Hamster 1</h2>
+               <p>Level: <span id="level1">1</span></p>
+               <p>XP: <span id="xp1">0</span></p>
+           </div>
+           <div id="hamster2" class="hamster">
+               <h2>Hamster 2</h2>
+               <p>Level: <span id="level2">1</span></p>
+               <p>XP: <span id="xp2">0</span></p>
+           </div>
+           <button id="tap-button">Tap!</button>
+           <button id="start-button">Start Game</button>
+           <button id="stop-button">Stop Game</button>
+       </div>
+       <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+   </body>
+   </html>

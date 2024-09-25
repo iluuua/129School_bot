@@ -7,5 +7,5 @@ def main():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host="https://129school.wuaze.com/", port=80)
+    app.run(debug=True)
     main()
