@@ -1,4 +1,5 @@
 from telegram_bot import bot
+from database.database import database
 from web_app.app import app
 
 
@@ -7,5 +8,6 @@ def main():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    database.create_tables()
     main()
+    app.run(debug=True)

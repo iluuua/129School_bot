@@ -14,20 +14,43 @@ class Database:
         cursor.execute("""
         CREATE TABLE IF NOT EXISTS USER
             (
-                user_id INT PRIMARY KEY,
+                user_id INTEGER PRIMARY KEY,
                 username TEXT NOT NULL,
-                coins INTEGER NOT NULL
+                coins INTEGER NOT NULL,
+                level INTEGER NOT NULL
             );
         """)
         self.connection.commit()
+
+        cursor.execute("""
+        CREATE TABLE IF NOT EXISTS PRODUCT
+            (
+                product_id INTEGER PRIMARY KEY, 
+                name TEXT NOT NULL,
+                price INTEGER NOT NULL,
+                points INTEGER NOT NULL,
+                description TEXT NOT NULL,
+                status TEXT NOT NULL,
+                owner_id INTEGER NOT NULL,
+                FOREIGN KEY (owner_id) REFERENCES USER(user_id),
+                CHECK ( 
+                    length("name") <= 20
+                ),
+                CHECK ( 
+                    length("description") <= 40
+                )
+            );
+        """)
+        self.connection.commit()
+
         cursor.close()
 
     def add_user(self, user_id, username):
         cursor = self.connection.cursor()
         cursor.execute("""
-        INSERT INTO USER (user_id, username, coins)
-        VALUES (?, ?, ?)
-        """, (user_id, username, 0))
+        INSERT INTO USER (user_id, username, coins, level)
+        VALUES (?, ?, ?, ?)
+        """, (user_id, username, 0, 0))
         self.connection.commit()
         cursor.close()
 
@@ -56,5 +79,8 @@ class Database:
         return result[0]
 
     def get_stats(self):
-        pass
+        statistics = self.connection.execute("SELECT * FROM USER ORDER BY coins").fetchall()
+        return statistics
 
+
+database = Database()
