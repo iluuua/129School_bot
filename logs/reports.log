@@ -135,3 +135,22 @@
 2024-10-04 19:50:25,236 - root - INFO - User Iluuuaaa (1011141225) tapped
 2024-10-04 19:50:33,494 - root - INFO - User chion596 (1229714531) tried to start again
 2024-10-04 19:50:47,948 - root - INFO - User chion596 (1229714531) tapped
+2024-10-04 19:55:12,220 - root - INFO - User m1quella (1853832396) is not registered
+2024-10-04 19:55:15,143 - root - INFO - User m1quella (1853832396) added to standings
+2024-10-04 19:55:21,530 - root - INFO - User m1quella (1853832396) tapped
+2024-10-04 19:55:24,531 - root - INFO - User m1quella (1853832396) tapped
+2024-10-04 19:55:26,730 - root - INFO - User m1quella (1853832396) tapped
+2024-10-04 19:55:28,982 - root - INFO - User m1quella (1853832396) tapped
+2024-10-04 19:55:31,495 - root - INFO - User m1quella (1853832396) tapped
+2024-10-04 19:56:58,500 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-04 19:56:58,500 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-10-04 19:56:58,501 - werkzeug - INFO -  * Restarting with stat
+2024-10-04 19:57:29,394 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-04 19:57:29,395 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-10-04 19:57:29,396 - werkzeug - INFO -  * Restarting with stat
+2024-10-04 19:57:40,176 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-04 19:57:40,177 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-10-04 19:57:40,178 - werkzeug - INFO -  * Restarting with stat
