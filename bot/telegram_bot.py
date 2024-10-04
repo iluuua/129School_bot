@@ -1,11 +1,10 @@
 from config.config import bot_config, logger
+from database.database import database
 from database.database import Database
 import telebot
 
 bot = telebot.TeleBot(bot_config['bot_token'])
 
-database = Database()
-database.create_tables()
 
 def check_registration(message):
     if not database.check_registration(message.from_user.id):
@@ -56,5 +55,9 @@ def stats(message):
         logger.info(f"User {message.from_user.username} ({message.from_user.id}) is not registered")
         return
 
-    # standings =
-    # bot.send_message(message.chat.id, "Текущие балансы : " + )
+    statistics = database.get_stats()
+    answer = ""
+    for user in statistics:
+        answer += f"@{user[1]} {user[2]} {user[3]}\n"
+    bot.send_message(message.chat.id, f"Текущие результаты: \n{answer}")
+
