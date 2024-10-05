@@ -1,11 +1,11 @@
 from telegram_bot import bot
-from database.database import database
-from web_app.app import app
+from School129_bot.database.database import database
 
 
 def main():
     bot.polling(none_stop=True)
 
 
-database.create_tables()
-main()
+if __name__ == '__main__':
+    database.create_tables()
+    main()
