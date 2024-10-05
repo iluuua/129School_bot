@@ -1,5 +1,5 @@
-from telegram_bot import bot
-from School129_bot.database.database import database
+from ..bot.telegram_bot import bot
+from ..database.database import database
 
 
 def main():

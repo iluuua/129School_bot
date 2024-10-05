@@ -1,5 +1,5 @@
-from School129_bot.config.config import bot_config, logger
-from School129_bot.database.database import database
+from ..config.config import bot_config, logger
+from ..database.database import database
 import telebot
 
 bot = telebot.TeleBot(bot_config['bot_token'])
