@@ -1,9 +1,9 @@
-from config.config import bot_config, logger
-from database.database import database
-from database.database import Database
+from ..config.config import bot_config, logger
+from ..database.database import database
 import telebot
 
 bot = telebot.TeleBot(bot_config['bot_token'])
+cnt = 0
 
 
 def check_registration(message):
